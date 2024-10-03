@@ -5,7 +5,7 @@ import icon1 from './main_images/icon1.png'
 import icon2 from './main_images/icon2.png'
 import icon3 from './main_images/icon3.png'
 import { Link } from 'react-router-dom';
-import login from './Login'
+
 
 export default function Home() {
   return (
