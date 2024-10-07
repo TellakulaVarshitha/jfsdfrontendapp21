@@ -25,41 +25,58 @@ body {
 
 
 /* Header and Hero sections */
+/* Header Styles */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  position: absolute; /* Position the header at the top */
+  left: 0;
+  text-align: left;               /* Text color */
 }
 
+/* Logo Styles */
 .logo {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: black;
+  color: black;                  /* Remove default margin */
 }
 
-.logo p {
-  color: black;
+/* Tagline Styles */
+.tag {
   font-weight: lighter;
   font-size: 1rem;
+  color: black;                 /* Remove default margin */
 }
 
-.login-button {
-  background-color: #00ddff;
-  color: white;
+
+
+/* Nav Bar Container */
+.nav-bar {
+  background-color: #86c3d8;
+  display: flex;
+  justify-content: flex-end;  /* Aligns links to the right */
+  align-items: center;        /* Vertically centers the links */
   padding: 10px 20px;
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  
+  gap: 20px;                  /* Adds gap between links */
 }
 
-/* Remove hover effect */
-.login-button:hover {
-  background-color: white; /* Same color to remove hover effect */
+/* Links within the Nav Bar */
+.nav-bar a {
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Hover effect for links */
+.nav-bar a:hover {
+  background-color: white;
+  color: #86c3d8;
+}
+
 
 /* Hero Section */
 .hero {
@@ -215,3 +232,339 @@ body {
     flex-basis: 100%;
   }
 }
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #86c3d8;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.service-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card styles */
+.service-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin: 10px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card h3 {
+  color: #86c3d8;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #333;
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.service-card {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .service-card {
+      width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .service-card {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #86c3d8; /* Background color for the page */
+  margin: 0;
+  padding: 0;
+}
+
+/* Login Page Container */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Header Styles */
+.app-header {
+  width: 100%;
+  padding: 20px;
+  position: absolute; /* Position the header at the top */
+  top: 0;
+  left: 0;
+  text-align: left; /* Align the logo to the left */
+}
+
+.app-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.tagline {
+  font-weight: lighter;
+  font-size: 1rem;
+  color: black; /* Tagline color */
+}
+
+/* Login Section Styles */
+.login-section {
+  display: flex;
+  justify-content: center;        
+  align-items: center;            
+  flex-grow: 1;                  
+  padding: 40px;                  
+  min-height: 60vh;               
+}
+
+.login-content {
+  text-align: center;            
+}
+
+/* Login Form Styles */
+.login-form {
+  padding: 60px;                 
+  background-color: white;
+  border-radius: 10px;
+  max-width: 600px;               
+  width: 100%;                  
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.submit-button {
+  background-color: #003d66;      
+  color: white;                    
+  padding: 15px;                   
+  border: none;                    
+  border-radius: 5px;             
+  cursor: pointer;                 
+  transition: background-color 0.3s ease; 
+  width: 100%;                   
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 20px;            
+  text-align: left;               
+}
+
+.form-group label {
+  display: block;                  
+  font-size: 1rem;                
+  color: #003d66;               
+  margin-bottom: 10px;            
+}
+
+.form-group input {
+  width: 100%;                    
+  padding: 15px;                  
+  border: 1px solid #ccc;        
+  border-radius: 5px;            
+  font-size: 1rem;                
+}
+
+/* Paragraph and Link Styles */
+.signup-prompt {
+  margin-top: 15px;               
+  color: #333;                    
+}
+
+.signup-link {
+  color: #003d66;                 
+  text-decoration: none;           
+  font-weight: bold;              
+}
+
+
+.signup-link:hover {
+  text-decoration: underline;      
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .login-form {
+    width: 90%;                    
+    padding: 20px;                 
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 15px;                 
+  }
+}
+
+
+/* Header Container */
+
+.header-container {
+  display: flex;                   
+  justify-content: space-between;  
+  align-items: center;             
+  padding: 20px;                   
+  background-color: #86c3d8;        
+}
+
+/* App Header Styles */
+.app-header {
+  display: flex;                  
+  align-items: center;             
+  width: 100%;                      
+}
+
+/* App Logo Styles */
+.app-logo {
+  font-size: 2rem;                 
+  font-weight: bold;                
+  color: black;                    
+  margin-right: auto;              
+}
+
+.tagline {
+  font-weight: lighter;             
+  font-size: 1rem;                  
+  margin: 0;                       
+}
+
+/* Navigation Bar Styles */
+.nav-bar {
+  display: flex;                    
+}
+
+.nav-bar a {
+  color: black;                     
+  text-decoration: none;            
+  font-size: 1rem;   
+}              
+/*signup.css*/
+
+.signup-section {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  min-height: 110vh;      
+  background-color: #86c3d8; 
+  margin-top: 50px;       
+}
+
+.signup-wrapper {
+  background-color: white;
+  padding: 40px;           
+  border-radius: 10px;     
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;        
+  width: 100%;             
+}
+
+.notification-message {
+  color: #d9534f;          
+  margin-bottom: 20px;     
+  text-align: center;      
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;   
+}
+
+.form-field {
+  margin-bottom: 15px;      
+}
+
+.form-field label {
+  display: block;            
+  margin-bottom: 5px;      
+  color: #003d66;           
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;             
+  padding: 10px;           
+  border: 1px solid #ccc;  
+  border-radius: 5px;      
+  font-size: 1rem;          
+}
+
+.form-actions {
+  margin-top: 20px;        
+}
+
+.form-actions button {
+  background-color: #003d66;
+  color: white;              
+  padding: 15px;             
+  border: none;             
+  border-radius: 5px;       
+  cursor: pointer;           
+  transition: background-color 0.3s ease; 
+  width: 100%;              
+}
+
+.form-actions button:hover {
+  background-color: #005b99; 
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .signup-wrapper {
+    padding: 20px;           
+    max-width: 90%;          
+}
+}
+
+
+
+
+
+
+
